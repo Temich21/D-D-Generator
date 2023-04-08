@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <>
       <BurgerProvider>
-        <Header />
+        <Header >
+        </Header>
         <Navigation />
         <div className={styles.text}>Welcome to our D&D website!</div>
       </BurgerProvider >
