@@ -1,0 +1,13 @@
+@import "./styles.scss";
+
+.text {
+    width: 85vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontFamily;
+    font-size: 40px;
+    color: $colorFont;
+    margin-left: 200px;
+}

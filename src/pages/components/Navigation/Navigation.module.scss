@@ -1,0 +1,37 @@
+@import "../../../styles/styles.scss";
+$fontSize: 24px;
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    position: fixed;
+    margin: 0;
+    top: $headerHeight;
+    width: 250px;
+    height: 300vh;
+    padding-left: 0;
+    padding-top: 15px;
+    transition: 1s ease;
+    background-color: rgba($color: #656565, $alpha: $opacity);
+}
+
+.navigationElement {
+    text-align: center;
+
+    .navigationText {
+        text-align: center;
+        font-family: $fontFamily;
+        font-size: $fontSize;
+        color: $colorFont;
+        text-decoration: none;
+    }
+
+    .line {
+        width: 200px;
+        border-bottom: 2px solid $colorFont;
+        border-radius: 100%;
+        text-decoration: none;
+    }
+}

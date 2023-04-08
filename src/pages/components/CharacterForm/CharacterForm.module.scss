@@ -1,0 +1,65 @@
+@import "../../../styles/styles.scss";
+$fontSize: 26px;
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 85px 10px 0 0;
+    background-color: rgba($color: #656565, $alpha: $opacity);
+    gap: 25px;
+    border-radius: 20px;
+    transition: 1s ease;
+
+    > :first-child {
+        padding-top: 30px;
+    }
+
+    .content {
+        font-size: $fontSize;
+        color: $colorFont;
+        font-family: $fontFamily;
+        display: flex;
+        align-items: center;
+
+        label {
+            padding-left: 30px;
+            width: 350px;
+        }
+
+        .inputName {
+            width: 350px;
+        }
+
+        .options {
+            font-size: $fontSize;
+            font-family: $fontFamily;
+            background-color: #000000;
+            color: $colorFont;
+            padding: 6px 5px 0 5px;
+            border-radius: 10px;
+        }
+    }
+
+    .bio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .bioText {
+            margin: 15px 0 0 30px;
+            width: 550px;
+            height: 200px;
+            font-size: 18px;
+            font-family: $fontFamily;
+            color: $colorFont;
+            background-color: #000000;
+            border-radius: 10px;
+        }
+    }
+
+    .contentButton {
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+}

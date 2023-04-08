@@ -1,0 +1,10 @@
+@import "../../../styles/styles.scss";
+
+.button {
+    font-size: 26px;
+    font-family: $fontFamily;
+    color: $colorFont;
+    background-color: #000000;
+    padding: 6px 5px 0 5px;
+    border-radius: 10px;
+}

@@ -1,0 +1,33 @@
+@import "../../../styles/styles.scss";
+
+$colorFont: white;
+$fontSize: 26px;
+
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    height: $headerHeight;
+    margin: 0 auto;
+    background-color: #303030;
+}
+
+.burger {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.Content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $colorFont;
+    gap: 10px;
+}
