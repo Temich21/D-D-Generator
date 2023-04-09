@@ -1,6 +1,6 @@
 # DnD-Generator
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-https://vercel.com/temich21/dnd-generator/CAHSVCebPc2D2SLwzLPTKbdmQ1Rx
+You can visit it here: https://vercel.com/temich21/dnd-generator/CAHSVCebPc2D2SLwzLPTKbdmQ1Rx
 
 ## Getting Started
 
