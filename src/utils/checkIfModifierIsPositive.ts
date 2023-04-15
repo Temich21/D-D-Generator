@@ -4,7 +4,7 @@ const checkIfModifierIsPositive = (characteristicValue: string) => {
       "Не могу проверить, является ли характеристика положительной"
     );
 
-  return Math.floor((Number(characteristicValue) - 10) / 2) >= 12;
+  return Math.floor((Number(characteristicValue) - 10) / 2) >= 1;
 };
 
 export default checkIfModifierIsPositive;

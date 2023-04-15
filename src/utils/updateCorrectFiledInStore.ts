@@ -1,13 +1,12 @@
 import { CharacterListFields } from "@component/store/defaultStore";
-import { PossibleAction } from "@component/store/reducer";
+import { ActionType, PossibleAction } from "@component/store/reducer";
 
 const updateCorrectFiledInStore = (
   state: CharacterListFields,
-  actionType: PossibleAction | string,
-  payload: any
+  { type, payload }: ActionType
 ) => ({
   ...state,
-  [actionType.replace("Change", "")]: payload,
+  [type.replace("Change", "")]: payload,
 });
 
 export default updateCorrectFiledInStore;
