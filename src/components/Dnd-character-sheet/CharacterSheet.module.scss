@@ -780,6 +780,27 @@ form.charsheet {
   }
 }
 
+.bio {
+  width: $sheet-width;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: $radius;
+  background-color: $bg;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  textarea {
+    text-align: left;
+    min-height: 100px;
+    resize: none;
+    overflow: hidden;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+  }
+}
+
 .otherProf {
   background-color: white;
 }

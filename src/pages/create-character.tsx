@@ -6,7 +6,6 @@ import { BurgerProvider } from '../components/Burger-nav/Burger-nav'
 import { CharacterSheet } from '../components/Dnd-character-sheet/CharacterSheet'
 import { ButtonElement } from '../components/ButtonElement/ButtonElement'
 import { useReactToPrint } from 'react-to-print'
-import { type } from 'os'
 
 export default function Home() {
     const componentRef = useRef(null)

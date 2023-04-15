@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import styles from "./CharacterSheet.module.scss"
 
 interface componentReference {
@@ -214,6 +214,17 @@ interface componentReference {
 }
 
 export const CharacterSheet = (props: componentReference) => {
+    const ref = useRef<HTMLTextAreaElement>(null);
+    let bioHeight
+
+    const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        if (ref.current) {
+            ref.current.style.height = "auto";
+            ref.current.style.height = `${e.target.scrollHeight - 16}px`;
+            bioHeight = e.target.scrollHeight
+        }
+    };
+
     return (
         <form className={styles.charsheet} ref={props.componentReference}>
             <header>
@@ -1044,6 +1055,15 @@ export const CharacterSheet = (props: componentReference) => {
                     </section>
                 </section>
             </main>
+            <div className={styles.bio}
+                style={{ height: `${bioHeight}px` }}>
+                <label htmlFor="bio">Your Background</label>
+                <textarea name='bio'
+                    ref={ref}
+                    rows={1}
+                    placeholder="Enter text here..."
+                    onInput={handleInput}></textarea>
+            </div>
         </form >
     )
 }
