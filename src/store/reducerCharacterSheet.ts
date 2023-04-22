@@ -1,16 +1,18 @@
 import createModifierRepresentation from "@component/utils/createModifierRepresentation";
 import updateCorrectFiledInStore from "@component/utils/updateCorrectFiledInStore";
-import fieldsDefaults, { CharacterListFields } from "./defaultStore";
+import fieldsDefaults, { CharacterListFields } from "./defaultStoreCharacterSheet";
 
 export enum PossibleAction {
   CharacterClear = "characterClear",
-  CharacterNameChange = "characterNameChange",
-  CharacterClassAndLevelChange = "characterClassAndLevelChange",
-  CharacterBackgroundChange = "characterBackgroundChange",
-  CharacterPlayerNameChange = "characterPlayerNameChange",
+  CharacterStrengthChange = "characterStrengthChange",
+  characterDexterityChange = "characterDexterityChange",
+  characterConstitutionChange = "characterConstitutionChange",
+  characterWisdomChange = "characterWisdomChange",
+  characterIntelligenceChange = "characterIntelligenceChange",
+  characterCharismaChange = "characterCharismaChange",
 }
 
-export type ActionType = {
+export type ActionTypeCharacterSheet = {
   // TODO: Замени Выпили стринг ваще
   type: PossibleAction | string;
   payload: any;
@@ -18,46 +20,46 @@ export type ActionType = {
 
 const reducer = (
   state: CharacterListFields,
-  action: ActionType
+  action: ActionTypeCharacterSheet
 ): CharacterListFields => {
-  console.log("action: ", action);
+  // console.log("action: ", action);
 
   switch (action.type) {
     case PossibleAction.CharacterClear:
       return {
         ...fieldsDefaults,
       };
-    case "characterStrengthChange":
+    case PossibleAction.CharacterStrengthChange:
       return {
         ...state,
         characterStrength: action.payload,
         characterStrengthmod: createModifierRepresentation(action.payload),
       };
-    case "characterDexterityChange":
+    case PossibleAction.characterDexterityChange:
       return {
         ...state,
         characterDexterity: action.payload,
         characterDexteritymod: createModifierRepresentation(action.payload),
       };
-    case "characterConstitutionChange":
+    case PossibleAction.characterConstitutionChange:
       return {
         ...state,
         characterConstitution: action.payload,
         characterConstitutionmod: createModifierRepresentation(action.payload),
       };
-    case "characterWisdomChange":
+    case PossibleAction.characterWisdomChange:
       return {
         ...state,
         characterWisdom: action.payload,
         characterWisdommod: createModifierRepresentation(action.payload),
       };
-    case "characterIntelligenceChange":
+    case PossibleAction.characterIntelligenceChange:
       return {
         ...state,
         characterIntelligence: action.payload,
         characterIntelligencemod: createModifierRepresentation(action.payload),
       };
-    case "characterCharismaChange":
+    case PossibleAction.characterCharismaChange:
       return {
         ...state,
         characterCharisma: action.payload,

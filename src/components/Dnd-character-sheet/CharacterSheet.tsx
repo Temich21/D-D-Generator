@@ -109,6 +109,7 @@ interface componentReference {
         characterBonds: string,
         characterFlaws: string,
         characterFeatures: string,
+        characterBio: string,
     }
     dispatch: {
         characterNameSet: (event: React.ChangeEvent<HTMLInputElement>) => void,
@@ -210,6 +211,7 @@ interface componentReference {
         characterBondsSet: (event: React.ChangeEvent<HTMLTextAreaElement>) => void,
         characterFlawsSet: (event: React.ChangeEvent<HTMLTextAreaElement>) => void,
         characterFeaturesSet: (event: React.ChangeEvent<HTMLTextAreaElement>) => void,
+        characterBioSet: (event: React.ChangeEvent<HTMLTextAreaElement>) => void,
     }
 }
 
@@ -1061,7 +1063,9 @@ export const CharacterSheet = (props: componentReference) => {
                 <textarea name='bio'
                     ref={ref}
                     rows={1}
-                    placeholder="Enter text here..."
+                    placeholder="Enter your bio here..."
+                    value={props.data.characterBio}
+                    onChange={props.dispatch.characterBioSet}
                     onInput={handleInput}></textarea>
             </div>
         </form >

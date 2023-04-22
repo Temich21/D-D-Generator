@@ -31,6 +31,10 @@ $fontSize: 26px;
             width: 350px;
         }
 
+        .inputLevel {
+            width: 270px;
+        }
+
         .options {
             font-size: $fontSize;
             font-family: $fontFamily;
@@ -59,7 +63,9 @@ $fontSize: 26px;
     }
 
     .contentButton {
+        display: flex;
         padding-left: 30px;
         padding-bottom: 30px;
+        gap: 30px;
     }
 }

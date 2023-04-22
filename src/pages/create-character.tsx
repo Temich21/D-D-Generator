@@ -1,32 +1,32 @@
-import Head from "next/head";
-import { useRef, useReducer, ReducerWithoutAction, Reducer } from "react";
-import { Header } from "../components/Header/Header";
-import { Navigation } from "../components/Navigation/Navigation";
-import { BurgerProvider } from "../components/Burger-nav/Burger-nav";
-import { CharacterSheet } from "../components/Dnd-character-sheet/CharacterSheet";
-import { ButtonElement } from "../components/ButtonElement/ButtonElement";
-import { useReactToPrint } from "react-to-print";
-import reducer, { ActionType } from "@component/store/reducer";
-import defaultStore, {
+import Head from "next/head"
+import { useRef, useReducer, Reducer } from "react"
+import { Header } from "../components/Header/Header"
+import { Navigation } from "../components/Navigation/Navigation"
+import { BurgerProvider } from "../components/Burger-nav/Burger-nav"
+import { CharacterSheet } from "../components/Dnd-character-sheet/CharacterSheet"
+import { ButtonElement } from "../components/ButtonElement/ButtonElement"
+import { useReactToPrint } from "react-to-print"
+import reducer, { ActionTypeCharacterSheet } from "@component/store/reducerCharacterSheet"
+import defaultStoreCharacterSheet, {
   CharacterListFields,
-} from "@component/store/defaultStore";
-import { createActions } from "@component/store/actions";
+} from "@component/store/defaultStoreCharacterSheet"
+import { createActions } from "@component/store/actionsCharacterSheet"
 
-export default function Home() {
+export default function CreateCharacter() {
   const componentRef = useRef(null);
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
     documentTitle: "emp-data",
   });
 
-  const [data, dispatch] = useReducer<Reducer<CharacterListFields, ActionType>>(
+  const [data, dispatch] = useReducer<Reducer<CharacterListFields, ActionTypeCharacterSheet>>(
     reducer,
-    defaultStore
+    defaultStoreCharacterSheet
   );
   const actions = createActions(data, dispatch);
 
   const handleClear = () => {
-    dispatch({ type: "characterClear", payload: defaultStore });
+    dispatch({ type: "characterClear", payload: defaultStoreCharacterSheet });
   };
 
   return (

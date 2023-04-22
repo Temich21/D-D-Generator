@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import { createContext, useState } from 'react'
 
 interface props {
     children: JSX.Element | JSX.Element[]
@@ -15,9 +15,8 @@ const defaultState = {
 
 export const BurgerContext = createContext<BurgerContextType>(defaultState)
 
-
 export const BurgerProvider = ({ children }: props) => {
-    const [burger, setBurger] = useState(defaultState.burger)
+    const [burger, setBurger] = useState<boolean>(defaultState.burger)
 
     function toggleBurger(): void {
         setBurger(prevBurger => !prevBurger)

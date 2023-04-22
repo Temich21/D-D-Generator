@@ -1,10 +1,11 @@
 import { Dispatch } from "react";
-import { CharacterListFields } from "./defaultStore";
-import { ActionType } from "./reducer";
+import { CharacterListFields } from "./defaultStoreCharacterSheet";
+import { ActionTypeCharacterSheet } from "./reducerCharacterSheet";
+import charcteristicControler from "../utils/characteristicControler"
 
 export const createActions = (
   data: CharacterListFields,
-  dispatch: Dispatch<ActionType>
+  dispatch: Dispatch<ActionTypeCharacterSheet>
 ) => ({
   characterNameSet: (event: React.ChangeEvent<HTMLInputElement>) =>
     dispatch({ type: "characterNameChange", payload: event.target.value }),
@@ -38,55 +39,37 @@ export const createActions = (
   characterStrengthSet: (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "characterStrengthChange",
-      payload:
-        Number(event.target.value) >= 0 && Number(event.target.value) <= 30
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterDexteritySet: (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "characterDexterityChange",
-      payload:
-        Number(event.target.value) >= 0 && Number(event.target.value) <= 30
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterConstitutionSet: (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "characterConstitutionChange",
-      payload:
-        Number(event.target.value) >= 0 && Number(event.target.value) <= 30
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterWisdomSet: (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "characterWisdomChange",
-      payload:
-        Number(event.target.value) >= 0 && Number(event.target.value) <= 30
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterIntelligenceSet: (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "characterIntelligenceChange",
-      payload:
-        Number(event.target.value) >= 0 && Number(event.target.value) <= 30
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterCharismaSet: (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "characterCharismaChange",
-      payload:
-        Number(event.target.value) >= 0 && Number(event.target.value) <= 30
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterProficiencyBonusSet: (
@@ -94,10 +77,7 @@ export const createActions = (
   ) => {
     dispatch({
       type: "characterProficiencyBonusChange",
-      payload:
-        Number(event.target.value) >= 2 && Number(event.target.value) <= 6
-          ? Number(event.target.value)
-          : 0,
+      payload: charcteristicControler(Number(event.target.value))
     });
   },
   characterStrengthSaveSet: (event: React.ChangeEvent<HTMLInputElement>) =>
@@ -136,7 +116,10 @@ export const createActions = (
       payload: event.target.value,
     }),
   WisdomSaveProfSet: () =>
-    dispatch({ type: "WisdomSaveProfChange", payload: !data.WisdomSaveProf }),
+    dispatch({
+      type: "WisdomSaveProfChange",
+      payload: !data.WisdomSaveProf
+    }),
   characterIntelligenceSaveSet: (event: React.ChangeEvent<HTMLInputElement>) =>
     dispatch({
       type: "characterIntelligenceSaveChange",
@@ -480,6 +463,11 @@ export const createActions = (
   characterFeaturesSet: (event: React.ChangeEvent<HTMLTextAreaElement>) =>
     dispatch({
       type: "characterFeaturesChange",
+      payload: event.target.value,
+    }),
+  characterBioSet: (event: React.ChangeEvent<HTMLTextAreaElement>) =>
+    dispatch({
+      type: "characterBioChange",
       payload: event.target.value,
     }),
 });

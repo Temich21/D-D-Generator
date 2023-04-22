@@ -1,4 +1,4 @@
-const defaultStore = {
+const defaultStoreCharacterSheet = {
   characterName: "",
   characterClassAndLevel: "",
   characterBackground: "",
@@ -104,8 +104,9 @@ const defaultStore = {
   characterBonds: "",
   characterFlaws: "",
   characterFeatures: "",
+  characterBio: "",
 };
 
-export type CharacterListFields = typeof defaultStore;
+export type CharacterListFields = typeof defaultStoreCharacterSheet;
 
-export default defaultStore;
+export default defaultStoreCharacterSheet;

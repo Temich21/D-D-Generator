@@ -34,4 +34,12 @@ $fontSize: 24px;
         border-radius: 100%;
         text-decoration: none;
     }
+
+    .active {
+        text-align: center;
+        font-family: $fontFamily;
+        font-size: $fontSize;
+        color: yellow;
+        text-decoration: none;
+    }
 }

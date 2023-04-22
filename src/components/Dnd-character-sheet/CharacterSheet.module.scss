@@ -801,6 +801,12 @@ form.charsheet {
   }
 }
 
+@media print {
+  .bio {
+    page-break-before: always;
+  }
+}
+
 .otherProf {
   background-color: white;
 }

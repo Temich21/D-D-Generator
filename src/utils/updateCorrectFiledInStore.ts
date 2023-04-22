@@ -1,5 +1,5 @@
-import { CharacterListFields } from "@component/store/defaultStore";
-import { ActionType, PossibleAction } from "@component/store/reducer";
+import { CharacterListFields } from "@component/store/defaultStoreCharacterSheet";
+import { ActionType } from "@component/store/reducerCharacterSheet";
 
 const updateCorrectFiledInStore = (
   state: CharacterListFields,
