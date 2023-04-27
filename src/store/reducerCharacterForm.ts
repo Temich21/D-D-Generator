@@ -7,7 +7,9 @@ export type ActionTypeCharacterForm = {
     payload: string | object
 };
 
-const reducer = (state: any, action: ActionTypeCharacterForm) => {
+const reducerCharacterForm = (state: any,
+    action: ActionTypeCharacterForm)
+    : CharacterFormFields => {
     switch (action.type) {
         case 'clearForm':
             return {
@@ -53,4 +55,4 @@ const reducer = (state: any, action: ActionTypeCharacterForm) => {
     }
 }
 
-export default reducer;
+export default reducerCharacterForm;

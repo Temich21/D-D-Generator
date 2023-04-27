@@ -4,6 +4,7 @@ import fieldsDefaults, { CharacterListFields } from "./defaultStoreCharacterShee
 
 export enum PossibleAction {
   CharacterClear = "characterClear",
+  CharacterFetch = "CharacterFetch",
   CharacterStrengthChange = "characterStrengthChange",
   characterDexterityChange = "characterDexterityChange",
   characterConstitutionChange = "characterConstitutionChange",
@@ -18,7 +19,7 @@ export type ActionTypeCharacterSheet = {
   payload: any;
 };
 
-const reducer = (
+const reducerCharacterSheet = (
   state: CharacterListFields,
   action: ActionTypeCharacterSheet
 ): CharacterListFields => {
@@ -28,6 +29,10 @@ const reducer = (
     case PossibleAction.CharacterClear:
       return {
         ...fieldsDefaults,
+      };
+    case PossibleAction.CharacterFetch:
+      return {
+        ...action.payload,
       };
     case PossibleAction.CharacterStrengthChange:
       return {
@@ -70,4 +75,4 @@ const reducer = (
   }
 };
 
-export default reducer;
+export default reducerCharacterSheet;

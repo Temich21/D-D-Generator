@@ -6,7 +6,7 @@ import { BurgerProvider } from "../components/Burger-nav/Burger-nav"
 import { CharacterSheet } from "../components/Dnd-character-sheet/CharacterSheet"
 import { ButtonElement } from "../components/ButtonElement/ButtonElement"
 import { useReactToPrint } from "react-to-print"
-import reducer, { ActionTypeCharacterSheet } from "@component/store/reducerCharacterSheet"
+import reducerCharacterSheet, { ActionTypeCharacterSheet } from "@component/store/reducerCharacterSheet"
 import defaultStoreCharacterSheet, {
   CharacterListFields,
 } from "@component/store/defaultStoreCharacterSheet"
@@ -20,7 +20,7 @@ export default function CreateCharacter() {
   });
 
   const [data, dispatch] = useReducer<Reducer<CharacterListFields, ActionTypeCharacterSheet>>(
-    reducer,
+    reducerCharacterSheet,
     defaultStoreCharacterSheet
   );
   const actions = createActions(data, dispatch);

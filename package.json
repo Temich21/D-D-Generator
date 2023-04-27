@@ -25,6 +25,7 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^6.10.0",
     "react-to-print": "^2.14.12",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
