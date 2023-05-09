@@ -68,20 +68,19 @@ export default function CharacterGenerator() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                body
+                message
             })
         }
 
         try {
             const data = await fetch(backendUrl, settings)
-            const serverResponse = await data.json()
             // const GPTAnswer = await serverResponse.body.name.json()
             // console.log(serverData.choices[0].text)
             // serverResponse = JSON.parse(serverData.choices[0].text)
             // dispatchGenerator({ type: 'loading', payload: false })
             // console.log(dataGenerator.characterForm, dataGenerator.loading)
-            console.log(JSON.parse(serverResponse.body.name))
-            const GPTAnswer = JSON.parse(serverResponse.body.name)
+            const serverResponse = await data.json()
+            const GPTAnswer = JSON.parse(serverResponse.choices[0].text)
             dispatchSheet({ type: "CharacterFetch", payload: GPTAnswer })
             loadingSet(false)
             characterSheetSet(true)
