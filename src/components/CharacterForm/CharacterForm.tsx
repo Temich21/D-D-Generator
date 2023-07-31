@@ -2,14 +2,13 @@ import React, { useContext, useReducer, Reducer } from "react"
 import { BurgerContext } from "../Burger-nav/Burger-nav"
 import styles from "./CharacterForm.module.scss"
 import { ButtonElement } from "../ButtonElement/ButtonElement"
-import defaultStoreCharactetForm, {
+import defaultStoreCharacterForm, {
     CharacterFormFields,
 } from "@component/store/defaultStoreCharacterForm"
 import reducerCharacterForm, { ActionTypeCharacterForm } from "@component/store/reducerCharacterForm"
 
-export const CharacterForm = ({ children }) => {
+export const CharacterForm = ({ dataForm, dispatchForm, children }) => {
     const { burger } = useContext(BurgerContext);
-    const [dataForm, dispatchForm] = useReducer<Reducer<CharacterFormFields, ActionTypeCharacterForm>>(reducerCharacterForm, defaultStoreCharactetForm)
 
     return (
         <form
@@ -120,7 +119,7 @@ export const CharacterForm = ({ children }) => {
                 {children}
                 <ButtonElement name="Clear" clickFuntion={(event: React.ChangeEvent) => {
                     event.preventDefault()
-                    dispatchForm({ type: 'clearForm', payload: defaultStoreCharactetForm })
+                    dispatchForm({ type: 'clearForm', payload: defaultStoreCharacterForm })
                 }} />
             </div>
         </form>

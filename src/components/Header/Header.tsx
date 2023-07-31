@@ -28,7 +28,6 @@ export const Header = ({ children }: buttonFC) => {
                         onClick={toggleBurger}
                         cursor='pointer' />
                 }
-
             </div>
             <div className={styles.Content}>
                 Our name

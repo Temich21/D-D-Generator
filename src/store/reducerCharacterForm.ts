@@ -1,6 +1,8 @@
+import { Reducer, useReducer } from "react";
 import defaultStoreCharactetForm, {
     CharacterFormFields,
 } from "@component/store/defaultStoreCharacterForm";
+import defaultStoreCharacterForm from "@component/store/defaultStoreCharacterForm";
 
 export type ActionTypeCharacterForm = {
     type: string
