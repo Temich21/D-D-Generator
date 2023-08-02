@@ -1,4 +1,3 @@
-import Head from "next/head"
 import { useRef, useReducer, Reducer } from "react"
 import { Header } from "../components/Header/Header"
 import { Navigation } from "../components/Navigation/Navigation"

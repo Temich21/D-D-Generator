@@ -1,13 +1,17 @@
-import React, { useContext, useReducer, Reducer } from "react"
+import React, { useContext, Dispatch } from "react"
 import { BurgerContext } from "../Burger-nav/Burger-nav"
 import styles from "./CharacterForm.module.scss"
 import { ButtonElement } from "../ButtonElement/ButtonElement"
-import defaultStoreCharacterForm, {
-    CharacterFormFields,
-} from "@component/store/defaultStoreCharacterForm"
-import reducerCharacterForm, { ActionTypeCharacterForm } from "@component/store/reducerCharacterForm"
+import defaultStoreCharacterForm from "@component/store/defaultStoreCharacterForm"
+import { ActionTypeCharacterSheet } from "@component/store/reducerCharacterSheet"
 
-export const CharacterForm = ({ dataForm, dispatchForm, children }) => {
+interface CharacterFormProps {
+    dataForm: typeof defaultStoreCharacterForm,
+    dispatchForm: Dispatch<ActionTypeCharacterSheet>,
+    children: React.ReactNode
+}
+
+export const CharacterForm = ({ dataForm, dispatchForm, children }: CharacterFormProps) => {
     const { burger } = useContext(BurgerContext);
 
     return (
