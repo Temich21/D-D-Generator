@@ -9,8 +9,7 @@ The D&D Character Sheet Generator project offers a seamless way to create and fi
 - **Dynamic Character Sheets:** The character sheet dynamically updates with the generated character's attributes, abilities, and statistics. This ensures accuracy and saves users time and effort.
 - **Versatile and Customizable:** The tool accommodates a wide range of character options and customization, allowing players to create characters tailored to their preferences and campaign requirements.
 - **Streamlined Gameplay:** By automating character sheet creation, the project enhances the overall D&D gameplay experience, enabling players to jump into their adventures more quickly and with greater ease. <br/>
-Throughout this repository, you'll find examples of my work with essential data analysis and machine learning libraries like Scikit-learn. These tasks encompass a range of techniques, from basic data retrieval to advanced machine learning applications.<br/><br/>
-My "Data Analysis and Visualization in Python" repository reflects my dedication to mastering the tools and techniques necessary for effective data analysis and visualization in the Python ecosystem.
-
+<br/>
+The D&D Character Sheet Generator project not only simplifies character creation but also demonstrates the fusion of technology and tabletop gaming, offering players a valuable tool to enhance their D&D adventures.
 
 
