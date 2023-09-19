@@ -1,41 +1,16 @@
-# DnD-Generator
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-You can visit it here: https://vercel.com/temich21/dnd-generator/CAHSVCebPc2D2SLwzLPTKbdmQ1Rx
+## D&D Character Sheet Generator
+The D&D Character Sheet Generator project offers a seamless way to create and fill out Dungeons & Dragons character sheets. This innovative tool simplifies the character creation process by allowing users to manually input character details or complete a form, which is then sent to the server side.
+## Key Features:
+- **User-Friendly Interface:** The project boasts an intuitive and user-friendly interface, making it accessible to both novice and experienced D&D players.
+- **Form-Based Input:** Users have the option to fill out a form with various character details, streamlining the character creation process.
+- **Server Communication:** The project communicates with a server, which acts as an intermediary between the user and ChatGPT, a powerful language model.
+- **ChatGPT Integration:** The server sends the user's input to ChatGPT, which generates a D&D character based on the provided information. This integration adds a layer of automation and creativity to character creation.
+- **Response Handling:** Upon receiving a JSON response from ChatGPT, the server processes the data and forwards it to the frontend. The frontend then populates the character sheet with the generated character's details.
+- **Dynamic Character Sheets:** The character sheet dynamically updates with the generated character's attributes, abilities, and statistics. This ensures accuracy and saves users time and effort.
+- **Versatile and Customizable:** The tool accommodates a wide range of character options and customization, allowing players to create characters tailored to their preferences and campaign requirements.
+- **Streamlined Gameplay:** By automating character sheet creation, the project enhances the overall D&D gameplay experience, enabling players to jump into their adventures more quickly and with greater ease. <br/>
+Throughout this repository, you'll find examples of my work with essential data analysis and machine learning libraries like Scikit-learn. These tasks encompass a range of techniques, from basic data retrieval to advanced machine learning applications.<br/><br/>
+My "Data Analysis and Visualization in Python" repository reflects my dedication to mastering the tools and techniques necessary for effective data analysis and visualization in the Python ecosystem.
 
-## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
